@@ -99,6 +99,32 @@ class Model(object):
         dropout0 = tf.layers.dropout(
         inputs=dense0, rate=0.4)
         
+		
+		dense = tf.layers.dense(inputs=dropout0, units=1024, activation=tf.nn.relu,name="dense0")
+        dropout = tf.layers.dropout(
+        inputs=dense, rate=0.4)
+		
+		dense1 = tf.layers.dense(inputs=dropout, units=512, activation=tf.nn.relu,name="dense0")
+        dropout1 = tf.layers.dropout(
+        inputs=dense0, rate=0.4)
+		
+        dense2 = tf.layers.dense(inputs=dropout1, units=256, activation=tf.nn.relu,name="dense2")
+        dropout2 = tf.layers.dropout(
+        inputs=dense2, rate=0.4)
+        
+        dense3 = tf.layers.dense(inputs=dropout2, units=128, activation=tf.nn.relu,name="dense3")
+        dropout3 = tf.layers.dropout(
+        inputs=dense3, rate=0.4)
+        
+        dense4 = tf.layers.dense(inputs=dropout3, units=64, activation=tf.nn.relu,name="dense4")
+        dropout4 = tf.layers.dropout(
+        inputs=dense4, rate=0.4)
+        
+        dense5 = tf.layers.dense(inputs=dropout4, units=32, activation=tf.nn.relu,name="dense5")
+        dropout5 = tf.layers.dropout(
+        inputs=dense5, rate=0.4)
+        
+        
         
         
         
@@ -112,7 +138,7 @@ class Model(object):
         
         ######################################################
         
-        self.yhat = tf.layers.dense(inputs = dropout0, units = 5, activation = 'sigmoid', name = 'fc_2')# this worked
+        self.yhat = tf.layers.dense(inputs = dropout5, units = 5, activation = 'sigmoid', name = 'fc_2')# this worked
         #logits = tf.layers.dense(inputs = fc1, units = 3, activation = None, name = 'fc_2')
         #self.yhat=tf.nn.softmax(logits)
         
