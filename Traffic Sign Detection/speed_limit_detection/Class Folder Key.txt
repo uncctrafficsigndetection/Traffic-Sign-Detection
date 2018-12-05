@@ -1,0 +1,9 @@
+00000 - Speed Limit 20
+00001 - Speed Limit 30
+00002 - Speed Limit 50
+00003 - Speed Limit 60
+00004 - Speed Limit 70
+00005 - Speed Limit 80
+00006 - Speed Limit 80 with a line through it
+00007 - Speed Limit 100
+00008 - Speed Limit 120
